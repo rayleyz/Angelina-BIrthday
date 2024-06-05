@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selamat Ulang Tahun Angelina Cyntia Hartono</title>
+    <style>
+        @keyframes float {
+            0% {
+                transform: translatey(0px);
+            }
+            50% {
+                transform: translatey(-20px);
+            }
+            100% {
+                transform: translatey(0px);
+            }
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: url('Angelina.jpeg') no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+        }
+        .container {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+        h1 {
+            color: #ff69b4;
+            margin: 0;
+        }
+        p {
+            color: #333;
+        }
+        .balloons {
+            margin-top: 20px;
+        }
+        .balloon {
+            display: inline-block;
+            width: 50px;
+            height: 70px;
+            background-color: #ff69b4;
+            border-radius: 50%;
+            position: relative;
+            margin: 0 10px;
+            animation: float 3s ease-in-out infinite;
+        }
+        .balloon:nth-child(2) {
+            background-color: #87cefa;
+            animation-delay: 1s;
+        }
+        .balloon:nth-child(3) {
+            background-color: #98fb98;
+            animation-delay: 2s;
+        }
+        .balloon::after {
+            content: '';
+            width: 2px;
+            height: 20px;
+            background: #333;
+            position: absolute;
+            bottom: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .confetti {
+            position: absolute;
+            top: -50px;
+            width: 10px;
+            height: 10px;
+            background: #ff69b4;
+            animation: float 5s infinite;
+            opacity: 0.8;
+        }
+        .confetti:nth-child(odd) {
+            background: #87cefa;
+        }
+        @keyframes confettiFall {
+            0% {
+                transform: translateY(0) rotate(0deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(100vh) rotate(720deg);
+                opacity: 0;
+            }
+        }
+        .confetti:nth-child(even) {
+            animation: confettiFall 4s linear infinite;
+        }
+        .cake {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .cake img {
+            width: 100px;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Selamat Ulang Tahun Angelina Cyntia Hartono</h1>
+        <p>Semoga goals tahun ini tercapai semuanya.</p>
+        <div class="balloons">
+            <div class="balloon"></div>
+            <div class="balloon"></div>
+            <div class="balloon"></div>
+        </div>
+        <div class="confetti" style="left: 20%; animation-delay: 0s;"></div>
+        <div class="confetti" style="left: 40%; animation-delay: 0.5s;"></div>
+        <div class="confetti" style="left: 60%; animation-delay: 1s;"></div>
+        <div class="confetti" style="left: 80%; animation-delay: 1.5s;"></div>
+        <div class="cake">
+            <img src="cake.png" alt="Cake">
+        </div>
+    </div>
+</body>
+</html>
